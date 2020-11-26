@@ -1,49 +1,30 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/rootyss/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/rootyss/frontend-project-lvl1/actions)",
+  "description": "[![Actions Status](https://github.com/rootyss/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/rootyss/frontend-project-lvl1/actions)\r [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/rootyss/frontend-project-lvl1/maintainability)\r [![Node CI](https://github.com/rootyss/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/rootyss/frontend-project-lvl1/actions)",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "code": "brain-games.js"
   },
-  "devDependencies": {
-    "babel-cli": "^6.9.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-regenerator": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "bake-cli": "^0.1.6",
+  "dependencies": {
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "readline-sync": "^1.4.10",
-    "mocha": "^2.5.2",
-    "standard-version": "^2.2.1",
-    "watchd": "github:mklabs/watchd"
+    "readline-sync": "^1.4.10"
   },
-  "bake": {
-    "description": "Scaffold a basic ES6 setup",
-    "scripts": {
-      "start": "echo Starting generation of default template",
-      "prestart": "echo prestart",
-      "poststart": "echo poststart",
-      "install": "npm install --loglevel warn --cache-min Infinity",
-      "preinstall": "echo Installing dependencies ...",
-      "postinstall": "npm ls --depth 0"
-    }
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
   },
   "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rootyss/frontend-project-lvl1.git"
   },
-  "bin": {
-    "brain-games": "bin/brain-games.js"
-  },
   "author": "rooty",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rootyss/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/rootyss/frontend-project-lvl1#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/rootyss/frontend-project-lvl1#readme"
 }
