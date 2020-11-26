@@ -1,6 +1,7 @@
 name: 'test my project'
 on:
-  - push
+  push:
+  pull_request:
 jobs:
   test-job:
     runs-on: ubuntu-16.04
@@ -15,4 +16,4 @@ jobs:
       run: npm i
 
     - name: 'test'
-      run: npm  test
+      run: npm run test
