@@ -1,6 +1,1 @@
-src
-node_modules
-.eslintignore
-.npmignore
-.gitignore
-package.json
+dist
