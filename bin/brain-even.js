@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import getUserName from '../src/cli.js';
-import { checkEven, giveCondition, getRandomNum } from '../games/checkEven.js';
+import { getRandomNum } from '../src/index.js';
+import { checkEven, giveCondition } from '../games/Even.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = getUserName();
