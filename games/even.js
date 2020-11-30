@@ -7,7 +7,7 @@ const descr = 'Answer "yes" if the number is even, otherwise answer "no".';
 const checkEven = (number) => (((number % 2) === 0) ? 'yes' : 'no');
 
 const brainEven = () => {
-  const randomNum = getRandomNum(100);
+  const randomNum = getRandomNum(1, 100);
   const even = checkEven(randomNum);
   console.log(`Question: ${randomNum}`);
   const answer = readlineSync.question('Your answer: ');

@@ -12,9 +12,9 @@ const calcExp = (op, a, b) => {
 };
 
 const brainCalc = () => {
-  const operand1 = getRandomNum(10);
-  const operand2 = getRandomNum(10);
-  const randOp = getRandomNum(3);
+  const operand1 = getRandomNum(1, 10);
+  const operand2 = getRandomNum(1, 10);
+  const randOp = getRandomNum(0, 2);
   const op = ['+', '-', '*'];
   const rigthResult = calcExp(op[randOp], operand1, operand2);
   console.log(`Question: ${operand1} ${op[randOp]} ${operand2}`);
