@@ -1,3 +1,14 @@
-const getRandomNum = (max) => Math.floor(Math.random() * Math.floor(max));
+import getUserName from './cli.js';
 
-export { getRandomNum };
+const userName = getUserName();
+const gameLogic = (descr, game) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(descr);
+  let countRightAnswers = 0;
+  while (countRightAnswers < 3) {
+    if (game()) countRightAnswers += 1;
+  }
+  if (countRightAnswers === 3) console.log(`Congratulations, ${userName}!`);
+};
+
+export { gameLogic, userName };

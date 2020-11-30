@@ -3,5 +3,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/rootyss/frontend-project-lvl1/maintainability)
 [![NodeCI](https://github.com/rootyss/frontend-project-lvl1/workflows/NodeCI/badge.svg)](https://github.com/rootyss/frontend-project-lvl1/actions)
 
-
-https://asciinema.org/a/xCrJkcIOSL0PuPdfeK0ZJPg06
+## Asciinema
+https://asciinema.org/a/xCrJkcIOSL0PuPdfeK0ZJPg06 - brain even
+https://asciinema.org/a/x32rwwyO97wP0lzhrHmDWVXqB - brain calc
