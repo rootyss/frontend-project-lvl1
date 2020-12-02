@@ -24,7 +24,7 @@ const progression = () => {
   }
   rigthResult = prog[indexHiddenElem];
   prog[indexHiddenElem] = '..';
-  console.log(`Question: ${arratToSting(prog)}`);
+  console.log(`Question:${arratToSting(prog)}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer === String(rigthResult)) {
     console.log('Correct!');
