@@ -2,7 +2,6 @@ import getUserName from './cli.js';
 
 const userName = getUserName();
 const gameLogic = (descr, game) => {
-  console.log('Welcome to the Brain Games!');
   console.log(descr);
   let countRightAnswers = 0;
   while (countRightAnswers < 3) {
