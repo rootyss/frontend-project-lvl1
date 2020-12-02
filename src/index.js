@@ -7,6 +7,7 @@ const gameLogic = (descr, game) => {
   let countRightAnswers = 0;
   while (countRightAnswers < 3) {
     if (game()) countRightAnswers += 1;
+    else return;
   }
   if (countRightAnswers === 3) console.log(`Congratulations, ${userName}!`);
 };
