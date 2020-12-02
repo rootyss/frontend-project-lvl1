@@ -1,5 +1,6 @@
 import getUserName from './cli.js';
 
+console.log('Welcome to the Brain Games!');
 const userName = getUserName();
 const gameLogic = (descr, game) => {
   console.log(descr);
