@@ -7,7 +7,7 @@ const descr = 'What number is missing in the progression?';
 const arratToSting = (array) => {
   let str = '';
   for (let i = 0; i < array.length; i += 1) {
-    str = `${str} ${array[i]} `;
+    str = `${str} ${array[i]}`;
   }
   return str;
 };
