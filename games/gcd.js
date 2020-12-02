@@ -4,7 +4,9 @@ import { gameLogic, userName } from '../src/index.js';
 
 const descr = 'Find the greatest common divisor of given numbers.';
 
-const findGcd = (a, b) => {
+const findGcd = (firsrtInt, secondInt) => {
+  let a = firsrtInt;
+  let b = secondInt;
   while (a !== b) {
     if (a > b) a -= b;
     else b -= a;
