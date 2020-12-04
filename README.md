@@ -5,7 +5,8 @@
 
 ### Asciinema
 #### brain even  
-[![asciicast](https://asciinema.org/a/375863.svg)](https://asciinema.org/a/375863)   
+![showcase](gif/brain-even.gif)  
+
 https://asciinema.org/a/x32rwwyO97wP0lzhrHmDWVXqB - brain calc  
 https://asciinema.org/a/rCAU9tRZsnsujApwWJq62SwqI - brain gcd  
 https://asciinema.org/a/bP5XUzC6lzhYTDKllK93tjvfc - brain progression  
