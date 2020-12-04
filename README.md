@@ -5,7 +5,7 @@
 
 ### Asciinema
 #### brain even  
-<script id="asciicast-375863" src="https://asciinema.org/a/375863.js" async></script>  
+[![asciicast](https://asciinema.org/a/375863.svg)](https://asciinema.org/a/375863)   
 https://asciinema.org/a/x32rwwyO97wP0lzhrHmDWVXqB - brain calc  
 https://asciinema.org/a/rCAU9tRZsnsujApwWJq62SwqI - brain gcd  
 https://asciinema.org/a/bP5XUzC6lzhYTDKllK93tjvfc - brain progression  
