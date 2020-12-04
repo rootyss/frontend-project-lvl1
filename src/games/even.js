@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import getRandomNum from '../src/randomNum.js';
-import { gameLogic, userName } from '../src/index.js';
+import getRandomNum from '../randomNum.js';
+import { gameLogic, userName } from '../index.js';
 
 const descr = 'Answer "yes" if the number is even, otherwise answer "no".';
 
