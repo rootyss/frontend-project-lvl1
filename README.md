@@ -6,8 +6,11 @@
 ### Asciinema
 #### brain even  
 ![showcase](gif/brain-even.gif)  
-
-https://asciinema.org/a/x32rwwyO97wP0lzhrHmDWVXqB - brain calc  
-https://asciinema.org/a/rCAU9tRZsnsujApwWJq62SwqI - brain gcd  
-https://asciinema.org/a/bP5XUzC6lzhYTDKllK93tjvfc - brain progression  
-https://asciinema.org/a/ylQlIdry6LmrzIZBHbCTMu3qU - brain prime
+#### brain calc  
+![showcase](gif/brain-calc.gif) 
+#### brain gcd  
+![showcase](gif/brain-gcd.gif) 
+#### brain progression  
+![showcase](gif/brain-progression.gif) 
+#### brain prime  
+![showcase](gif/brain-prime.gif) 
