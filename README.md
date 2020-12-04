@@ -4,7 +4,8 @@
 [![NodeCI](https://github.com/rootyss/frontend-project-lvl1/workflows/NodeCI/badge.svg)](https://github.com/rootyss/frontend-project-lvl1/actions)
 
 ### Asciinema
-https://asciinema.org/a/xCrJkcIOSL0PuPdfeK0ZJPg06 - brain even  
+#### brain even  
+<script id="asciicast-375863" src="https://asciinema.org/a/375863.js" async></script>  
 https://asciinema.org/a/x32rwwyO97wP0lzhrHmDWVXqB - brain calc  
 https://asciinema.org/a/rCAU9tRZsnsujApwWJq62SwqI - brain gcd  
 https://asciinema.org/a/bP5XUzC6lzhYTDKllK93tjvfc - brain progression  
