@@ -1,6 +1,6 @@
-import readlineSync from 'readline-sync';
+import { cons } from '@hexlet/pairs';
 import getRandomNum from '../randomNum.js';
-import { gameLogic, userName } from '../index.js';
+import gameLogic from '../index.js';
 
 const descr = 'What number is missing in the progression?';
 
@@ -17,21 +17,15 @@ const progression = () => {
   const progressionStep = getRandomNum(2, 10);
   const firstElement = getRandomNum(1, 30);
   const indexHiddenElem = getRandomNum(0, progressionLegth - 1);
-  const prog = [firstElement];
-  let rigthResult = [];
+  const question = [firstElement];
+  let rightAnswer = [];
   for (let i = 1; i <= progressionLegth; i += 1) {
-    prog.push(prog[i - 1] + progressionStep);
+    question.push(question[i - 1] + progressionStep);
   }
-  rigthResult = prog[indexHiddenElem];
-  prog[indexHiddenElem] = '..';
-  console.log(`Question:${arratToSting(prog)}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer === String(rigthResult)) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rigthResult}'.\nLet's try again, ${userName}!`);
-  return false;
+  rightAnswer = question[indexHiddenElem];
+  question[indexHiddenElem] = '..';
+
+  return cons(arratToSting(question), rightAnswer);
 };
 
 export default () => gameLogic(descr, progression);

@@ -1,21 +1,15 @@
-import readlineSync from 'readline-sync';
+import { cons } from '@hexlet/pairs';
 import getRandomNum from '../randomNum.js';
-import { gameLogic, userName } from '../index.js';
+import gameLogic from '../index.js';
 
 const descr = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const checkEven = (number) => (((number % 2) === 0) ? 'yes' : 'no');
+const isEven = (number) => (number % 2 === 0);
 
 const brainEven = () => {
-  const randomNum = getRandomNum(1, 100);
-  const even = checkEven(randomNum);
-  console.log(`Question: ${randomNum}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer === even) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${even}'.\nLet's try again, ${userName}!`);
-  return false;
+  const question = getRandomNum(1, 100);
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
+
+  return cons(question, rightAnswer);
 };
 export default () => gameLogic(descr, brainEven);

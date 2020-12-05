@@ -1,6 +1,6 @@
-import readlineSync from 'readline-sync';
+import { cons } from '@hexlet/pairs';
 import getRandomNum from '../randomNum.js';
-import { gameLogic, userName } from '../index.js';
+import gameLogic from '../index.js';
 
 const descr = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
@@ -10,16 +10,10 @@ const isPrime = (num) => {
 };
 
 const prime = () => {
-  const int = getRandomNum(2, 100);
-  const rigthResult = isPrime(int);
-  console.log(`Question: ${int}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer === String(rigthResult)) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rigthResult}'.\nLet's try again, ${userName}!`);
-  return false;
+  const question = getRandomNum(2, 100);
+  const rightAnswer = isPrime(question);
+
+  return cons(question, rightAnswer);
 };
 
 export default () => gameLogic(descr, prime);

@@ -1,6 +1,6 @@
-import readlineSync from 'readline-sync';
+import { cons } from '@hexlet/pairs';
 import getRandomNum from '../randomNum.js';
-import { gameLogic, userName } from '../index.js';
+import gameLogic from '../index.js';
 
 const descr = 'What is the result of the expression?';
 
@@ -16,15 +16,10 @@ const brainCalc = () => {
   const operand2 = getRandomNum(1, 10);
   const randOp = getRandomNum(0, 2);
   const op = ['+', '-', '*'];
-  const rigthResult = calcExp(op[randOp], operand1, operand2);
-  console.log(`Question: ${operand1} ${op[randOp]} ${operand2}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer === String(rigthResult)) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rigthResult}'.\nLet's try again, ${userName}!`);
-  return false;
+  const rightAnswer = calcExp(op[randOp], operand1, operand2);
+  const question = `${operand1} ${op[randOp]} ${operand2}`;
+
+  return cons(question, rightAnswer);
 };
 
 export default () => gameLogic(descr, brainCalc);

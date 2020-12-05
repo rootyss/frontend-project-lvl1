@@ -1,6 +1,6 @@
-import readlineSync from 'readline-sync';
+import { cons } from '@hexlet/pairs';
 import getRandomNum from '../randomNum.js';
-import { gameLogic, userName } from '../index.js';
+import gameLogic from '../index.js';
 
 const descr = 'Find the greatest common divisor of given numbers.';
 
@@ -17,15 +17,10 @@ const findGcd = (firsrtInt, secondInt) => {
 const brainGcd = () => {
   const a = getRandomNum(1, 50);
   const b = getRandomNum(1, 50);
-  const rigthResult = findGcd(a, b);
-  console.log(`Question: ${a} ${b}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer === String(rigthResult)) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rigthResult}'.\nLet's try again, ${userName}!`);
-  return false;
+  const question = `${a} ${b}`;
+  const rightAnswer = findGcd(a, b);
+
+  return cons(question, rightAnswer);
 };
 
 export default () => gameLogic(descr, brainGcd);
