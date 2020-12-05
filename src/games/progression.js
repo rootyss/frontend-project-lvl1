@@ -25,7 +25,7 @@ const progression = () => {
   rightAnswer = question[indexHiddenElem];
   question[indexHiddenElem] = '..';
 
-  return cons(arratToSting(question), rightAnswer);
+  return cons(arratToSting(question).trim(), rightAnswer);
 };
 
 export default () => gameLogic(descr, progression);
