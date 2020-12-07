@@ -2,15 +2,17 @@ import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 import getUserName from './cli.js';
 
-console.log('Welcome to the Brain Games!');
-const userName = getUserName();
+const showGreeting = () => console.log('Welcome to the Brain Games!');
+const resultForWin = 3;
 
 export default (descr, game) => {
+  showGreeting();
+  const userName = getUserName();
   console.log(descr);
 
   let countRightAnswers = 0;
 
-  while (countRightAnswers < 3) {
+  while (countRightAnswers < resultForWin) {
     const gameData = game();
     const question = car(gameData);
     const rightAnswer = `${cdr(gameData)}`;
@@ -24,5 +26,5 @@ export default (descr, game) => {
       return;
     }
   }
-  if (countRightAnswers === 3) console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };

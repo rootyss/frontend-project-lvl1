@@ -1,17 +1,23 @@
 import { cons } from '@hexlet/pairs';
 import getRandomNum from '../randomNum.js';
-import gameLogic from '../index.js';
+import buildGame from '../index.js';
 
 const descr = 'What is the result of the expression?';
 
 const calcExp = (op, a, b) => {
-  if (op === '+') return a + b;
-  if (op === '-') return a - b;
-  if (op === '*') return a * b;
-  return false;
+  switch (op) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+    case '*':
+      return a * b;
+    default:
+      throw new Error(`Unknown operator: '${op}'!`);
+  }
 };
 
-const brainCalc = () => {
+const genGameCalc = () => {
   const operand1 = getRandomNum(1, 10);
   const operand2 = getRandomNum(1, 10);
   const randOp = getRandomNum(0, 2);
@@ -22,4 +28,4 @@ const brainCalc = () => {
   return cons(question, rightAnswer);
 };
 
-export default () => gameLogic(descr, brainCalc);
+export default () => buildGame(descr, genGameCalc);

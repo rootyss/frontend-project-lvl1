@@ -1,7 +1,5 @@
 export default (min, max) => {
-  let a = min;
-  let b = max;
-  a = Math.ceil(a);
-  b = Math.floor(b);
+  const a = Math.ceil(min);
+  const b = Math.floor(max);
   return Math.floor(Math.random() * (b - a + 1)) + a;
 };

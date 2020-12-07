@@ -1,19 +1,21 @@
 import { cons } from '@hexlet/pairs';
 import getRandomNum from '../randomNum.js';
-import gameLogic from '../index.js';
+import buildGame from '../index.js';
 
 const descr = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 const isPrime = (num) => {
-  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) { if (num % i === 0 || num === 1) return 'no'; }
-  return 'yes';
+  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
+    if (num % i === 0 || num === 1) return false;
+  }
+  return true;
 };
 
-const prime = () => {
+const genGamePrime = () => {
   const question = getRandomNum(2, 100);
-  const rightAnswer = isPrime(question);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
 
   return cons(question, rightAnswer);
 };
 
-export default () => gameLogic(descr, prime);
+export default () => buildGame(descr, genGamePrime);
