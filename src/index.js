@@ -1,28 +1,33 @@
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
-import getUserName from './cli.js';
 
-const showGreeting = () => console.log('Welcome to the Brain Games!');
-const resultForWin = 3;
+const getUserName = () => {
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  return name;
+};
 
-export default (descr, game) => {
-  showGreeting();
+const countRound = 3;
+
+export default (description, importGameData) => {
+  console.log('Welcome to the Brain Games!');
   const userName = getUserName();
-  console.log(descr);
+  console.log(description);
 
-  let countRightAnswers = 0;
+  let rightAnswersCount = 0;
 
-  while (countRightAnswers < resultForWin) {
-    const gameData = game();
+  while (rightAnswersCount < countRound) {
+    const gameData = importGameData();
     const question = car(gameData);
-    const rightAnswer = `${cdr(gameData)}`;
+    const rightAnswer = cdr(gameData);
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === rightAnswer) {
       console.log('Correct!');
-      countRightAnswers += 1;
+      rightAnswersCount += 1;
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      console.log(`'Let's try again, ${userName}!`);
       return;
     }
   }

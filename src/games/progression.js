@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 import getRandomNum from '../randomNum.js';
 import buildGame from '../index.js';
 
-const descr = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const generateProgression = (firstElement, progressionLegth, progressionStep) => {
   const progression = [firstElement];
@@ -14,7 +14,7 @@ const generateProgression = (firstElement, progressionLegth, progressionStep) =>
 
 const getElemProg = (progression, index) => progression[index];
 
-const hiddenElemProg = (progression, index) => {
+const genQuestionGame = (progression, index) => {
   const progWithHiddenElem = progression;
   progWithHiddenElem[index] = '..';
   return progWithHiddenElem;
@@ -26,10 +26,10 @@ const genGameProgression = () => {
   const firstElement = getRandomNum(1, 30);
   const indexHiddenElem = getRandomNum(0, progressionLegth - 1);
   let progression = generateProgression(firstElement, progressionLegth, progressionStep);
-  const rightAnswer = getElemProg(progression, indexHiddenElem);
-  progression = hiddenElemProg(progression, indexHiddenElem);
+  const rightAnswer = `${getElemProg(progression, indexHiddenElem)}`;
+  progression = genQuestionGame(progression, indexHiddenElem);
 
   return cons(progression.join(' '), rightAnswer);
 };
 
-export default () => buildGame(descr, genGameProgression);
+export default () => buildGame(description, genGameProgression);
