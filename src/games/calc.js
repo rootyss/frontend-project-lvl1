@@ -21,7 +21,7 @@ const operators = '+-*';
 const genGameCalc = () => {
   const operand1 = getRandomNum(1, 10);
   const operand2 = getRandomNum(1, 10);
-  const randomOperator = getRandomNum(0, operators.length);
+  const randomOperator = getRandomNum(0, operators.length - 1);
   const rightAnswer = `${calcExp(operators[randomOperator], operand1, operand2)}`;
   const question = `${operand1} ${operators[randomOperator]} ${operand2}`;
 
