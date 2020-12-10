@@ -21,7 +21,7 @@ const genGameGcd = () => {
   const a = getRandomNum(1, 50);
   const b = getRandomNum(1, 50);
   const question = `${a} ${b}`;
-  const rightAnswer = `${findGcd(a, b)}`;
+  const rightAnswer = String(findGcd(a, b));
 
   return cons(question, rightAnswer);
 };

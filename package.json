@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "brain-games",
+  "description": "5 console games for brain training",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
