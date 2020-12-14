@@ -17,7 +17,7 @@ const findGcd = (firstInt, secondInt) => {
   return a;
 };
 
-const genGameGcd = () => {
+const genGameQuestion = () => {
   const a = getRandomNum(1, 50);
   const b = getRandomNum(1, 50);
   const question = `${a} ${b}`;
@@ -26,4 +26,4 @@ const genGameGcd = () => {
   return cons(question, rightAnswer);
 };
 
-export default () => buildGame(description, genGameGcd);
+export default () => buildGame(description, genGameQuestion);

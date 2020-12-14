@@ -15,12 +15,12 @@ const generateProgression = (firstElement, progressionLength, progressionStep) =
 const getElemProg = (progression, index) => progression[index];
 
 const genQuestionGame = (progression, index) => {
-  const progWithHiddenElem = progression;
-  progWithHiddenElem[index] = '..';
-  return progWithHiddenElem.join(' ');
+  const question = progression;
+  question[index] = '..';
+  return question.join(' ');
 };
 
-const genGameProgression = () => {
+const genGameQuestion = () => {
   const progressionLength = getRandomNum(10, 16);
   const progressionStep = getRandomNum(2, 10);
   const firstElement = getRandomNum(1, 30);
@@ -32,4 +32,4 @@ const genGameProgression = () => {
   return cons(question, rightAnswer);
 };
 
-export default () => buildGame(description, genGameProgression);
+export default () => buildGame(description, genGameQuestion);

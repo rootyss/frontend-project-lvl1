@@ -8,7 +8,7 @@ const isPrime = (num) => {
   if (num === 1) {
     return false;
   }
-  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
+  for (let i = 2, lastDividing = Math.sqrt(num); i <= lastDividing; i += 1) {
     if (num % i === 0 || num === 1) {
       return false;
     }
@@ -16,11 +16,11 @@ const isPrime = (num) => {
   return true;
 };
 
-const genGamePrime = () => {
+const genGameQuestion = () => {
   const question = getRandomNum(2, 100);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
 
   return cons(question, rightAnswer);
 };
 
-export default () => buildGame(description, genGamePrime);
+export default () => buildGame(description, genGameQuestion);
